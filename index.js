@@ -54,11 +54,11 @@ async function itearateZip(zipData, modifiers = [], verbose = false) {
     );
     if (filteredModifiers.length) {
         verbose && console.log("modifying", relativePath);
-      const initialString = await file.async("string");
+      const initialContent = await file.async("string");
       // run modifiers
       const result = filteredModifiers.reduce(
-        (string, { modifier }) => modifier(string),
-        initialString
+        (content, { modifier }) => modifier(content, relativePath),
+        initialContent
       );
       if (result) {
         // update zip file
