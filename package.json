@@ -1,6 +1,6 @@
 {
-  "name": "@dudadev/zipModifier",
-  "version": "1.0.0",
+  "name": "@dudadev/zip-modifier",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
